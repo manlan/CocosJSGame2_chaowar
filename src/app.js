@@ -64,8 +64,74 @@ var HelloWorldLayer = cc.Layer.extend({
                 cc.tintTo(2.5,255,125,0)
             )
         );
+
+        // plist文件
+        cc.spriteFrameCache.addSpriteFrames(res.dpsg_plist, res.dpsg_png);
+        //  cc.textureCache.addImage(res.dpsg_png);
+        this.initPlist();
+        // this.bakeLayer();
+        
         return true;
-    }
+    },
+
+    initPlist:function() {
+        cc.log("----------------dpsg.plist-----------");
+        
+        var sp1 = new  cc.Sprite("#di_bt_icon_1.png");
+//      sp1.setAnchorPoint(0, 0);
+        sp1.attr({
+            x: 100,
+            y: 100,
+            AnchorX:0,
+            AnchorY:0
+        })
+        this.addChild(sp1, 2);
+        
+            
+        var sp2 = new  cc.Sprite("#di_bt_icon_4.png");
+//      sp1.setAnchorPoint(0, 0);
+        sp2.attr({
+            x: 200,y: 100,AnchorX:0,AnchorY:0
+        })
+        this.addChild(sp2, 2);
+        
+        var sp3 = new  cc.Sprite("#di_bt_icon_5.png");
+//      sp1.setAnchorPoint(0, 0);
+        sp3.attr({
+            x: 300,
+            y: 100,
+            AnchorX:0,
+            AnchorY:0
+        })
+        this.addChild(sp3, 2);
+        
+        //////
+        var res1 = new  cc.Sprite(res.di_bt_icon_1_png);
+//      sp1.setAnchorPoint(0, 0);
+        res1.attr({
+            x: 100,y: 300,AnchorX:0,AnchorY:0
+        })
+        this.addChild(res1, 2);
+        
+        var res2 = new  cc.Sprite(res.di_bt_icon_3_png);
+//      sp1.setAnchorPoint(0, 0);
+        res2.attr({
+            x: 200,y: 300,AnchorX:0,AnchorY:0
+        })
+        this.addChild(res2, 2);
+        
+        var res3 = new  cc.Sprite(res.di_bt_icon_4_png);
+//      sp1.setAnchorPoint(0, 0);
+        res3.attr({
+            x: 300,y: 300,AnchorX:0,AnchorY:0
+        })
+        this.addChild(res3, 2);
+    },
+    
+    bakeLayer:function() {
+        cc.log("bake");
+//      this.bake();
+    },
 });
 
 /*

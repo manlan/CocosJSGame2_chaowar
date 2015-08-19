@@ -8,13 +8,10 @@ var MainMenuSenceLayer = cc.Layer.extend({
 		cc.log("---------MainMenuSenceLayer1----------");
 		this._winSize = cc.director.getWinSize();
 
+		util.playMusic(MusicSceneType.BG_MUSIC);
 		this.initBackgroundLayer();
 
 		// 加载plist
-        cc.spriteFrameCache.addSpriteFrames(res.dpsg_plist, res.dpsg_png);
-//        cc.textureCache.addImage(res.dpsg_png);
-        // this.initPlist();
-        // this.bakeLayer();
 	},
 
 	initBackgroundLayer:function () {
@@ -46,7 +43,8 @@ var MainMenuSenceLayer = cc.Layer.extend({
 		var btnPlay = new cc.MenuItemImage(res.btnPlay_png, res.btnHelpdown, null,
            function () {
                cc.log("------btnPlay!");
-               cc.audioEngine.playEffect(btnMusic);
+               // cc.audioEngine.playEffect(btnMusic);
+               util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(200,0,0) ); 
            }, this);
        btnPlay.attr({
@@ -55,7 +53,8 @@ var MainMenuSenceLayer = cc.Layer.extend({
 		var btnCredits = new cc.MenuItemImage(res.btnCredit_png, res.btnCreditdown_png, null,
            function () {
                cc.log("------goToCreditsSence");
-               cc.audioEngine.playEffect(btnMusic);
+               // cc.audioEngine.playEffect(btnMusic);
+               util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(0,200,0) ); 
            }, this);
        btnCredits.attr({
@@ -67,7 +66,8 @@ var MainMenuSenceLayer = cc.Layer.extend({
        var btnArch = new cc.MenuItemImage(res.btnArchievement_png, res.btnArchievementdown_png, null,
            function () {
                cc.log("------goToArchSence");
-               cc.audioEngine.playEffect(btnMusic);
+               // cc.audioEngine.playEffect(btnMusic);
+               util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(0,0, 200) ); 
            }, this);
        btnArch.attr({
@@ -77,7 +77,8 @@ var MainMenuSenceLayer = cc.Layer.extend({
         var btnHelp = new cc.MenuItemImage(res.btnHelp_png, res.btnHelpdown_png, null, 
            function () {
                cc.log("------goToHelpSence");
-               cc.audioEngine.playEffect(btnMusic);
+               // cc.audioEngine.playEffect(btnMusic);
+               util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(200, 200, 0) ); 
            }, this);
        btnHelp.attr({
@@ -107,64 +108,7 @@ var MainMenuSenceLayer = cc.Layer.extend({
         }
     },
 
-	initPlist:function() {
-    	cc.log("----------------dpsg.plist-----------");
-    	
-    	var sp1 = new  cc.Sprite("#di_bt_icon_1.png");
-//    	sp1.setAnchorPoint(0, 0);
-    	sp1.attr({
-    		x: 100,
-    		y: 100,
-    		AnchorX:0,
-    		AnchorY:0
-    	})
-    	this.addChild(sp1, 2);
-    	
-    		
-    	var sp2 = new  cc.Sprite("#di_bt_icon_4.png");
-//  	sp1.setAnchorPoint(0, 0);
-    	sp2.attr({
-    		x: 200,y: 100,AnchorX:0,AnchorY:0
-    	})
-    	this.addChild(sp2, 2);
-    	
-    	var sp3 = new  cc.Sprite("#di_bt_icon_5.png");
-//  	sp1.setAnchorPoint(0, 0);
-    	sp3.attr({
-    		x: 300,
-    		y: 100,
-    		AnchorX:0,
-    		AnchorY:0
-    	})
-    	this.addChild(sp3, 2);
-    	
-    	//////
-    	var res1 = new  cc.Sprite(res.di_bt_icon_1_png);
-//  	sp1.setAnchorPoint(0, 0);
-    	res1.attr({
-    		x: 100,y: 300,AnchorX:0,AnchorY:0
-    	})
-    	this.addChild(res1, 2);
-    	
-    	var res2 = new  cc.Sprite(res.di_bt_icon_3_png);
-//  	sp1.setAnchorPoint(0, 0);
-    	res2.attr({
-    		x: 200,y: 300,AnchorX:0,AnchorY:0
-    	})
-    	this.addChild(res2, 2);
-    	
-    	var res3 = new  cc.Sprite(res.di_bt_icon_4_png);
-//  	sp1.setAnchorPoint(0, 0);
-    	res3.attr({
-    		x: 300,y: 300,AnchorX:0,AnchorY:0
-    	})
-    	this.addChild(res3, 2);
-    },
-    
-    bakeLayer:function() {
-    	cc.log("bake");
-//    	this.bake();
-    },
+	
 });
 
 var MainMenuSence = cc.Scene.extend({
