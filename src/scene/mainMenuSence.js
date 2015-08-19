@@ -11,6 +11,18 @@ var MainMenuSenceLayer = cc.Layer.extend({
 		util.playMusic(MusicSceneType.BG_MUSIC);
 		this.initBackgroundLayer();
 
+		// 测试 ccui模块 =  
+		// "modules": [
+   	 	// "cocos2d",
+    	// "ccui"
+  		// ],
+  		
+		var background = new ccui.ImageView(res.logo_png);
+		background.attr({anchorX: 0.5, anchorY: 0.5, 
+			x : this._winSize.width/2, 
+			y : this._winSize.height/2 }); // w: 240
+		// this.addChild(background);
+
 		// 加载plist
 	},
 
