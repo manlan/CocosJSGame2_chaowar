@@ -16,7 +16,7 @@ var MainMenuSenceLayer = cc.Layer.extend({
    	 	// "cocos2d",
     	// "ccui"
   		// ],
-  		
+
 		var background = new ccui.ImageView(res.logo_png);
 		background.attr({anchorX: 0.5, anchorY: 0.5, 
 			x : this._winSize.width/2, 
@@ -89,6 +89,7 @@ var MainMenuSenceLayer = cc.Layer.extend({
                util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(0,0, 200) ); 
 
+               cc.director.runScene(new BaseMenuScene() ); // baseMenuScene, ArchievementSence
            }, this);
        btnArch.attr({
            x: 375, y: 50, anchorX: 0.5, anchorY: 0.5 });
@@ -100,6 +101,8 @@ var MainMenuSenceLayer = cc.Layer.extend({
                // cc.audioEngine.playEffect(btnMusic);
                util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(200, 200, 0) ); 
+
+               cc.director.runScene(new HelpSence() );
            }, this);
        btnHelp.attr({
            x: 120, y: 50, anchorX: 0.5, anchorY: 0.5 });

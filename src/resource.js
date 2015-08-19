@@ -2,14 +2,17 @@ var res = {
     HelloWorld_png : "res/HelloWorld.png",
     CloseNormal_png : "res/CloseNormal.png",
     CloseSelected_png : "res/CloseSelected.png",
-    
+
     mainMenuBg_png : "res/MainMenu/mainMenuBg.png",
     logo_png : "res/MainMenu/logo.png",
     btnPlay_png : "res/MainMenu/btnPlay.png",
 
     creditsBg_png : "res/HelpSence/creditsBg.png",
+    helpBg_png : "res/HelpSence/helpBg.png",
     btnBack_png : "res/SelectSence/btnBack.png",
     btnBackDown_png : "res/SelectSence/btnBackDown.png",
+    archievementBg_png : "res/ArchievementSence/archievementBg.png",
+    archievement01_png : "res/ArchievementSence/archievement01.png",
 
     btnCredit_png : "res/MainMenu/btnCredit.png",
     btnCreditdown_png : "res/MainMenu/btnCreditdown.png",

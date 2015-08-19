@@ -14,8 +14,12 @@
   "jsList": [
     "src/resource.js",
     "src/app.js",
+
+    "src/scene/BaseMenuScene.js",
     "src/scene/mainMenuSence.js",
     "src/scene/CreditsSence.js",
+    "src/scene/HelpSence.js",
+    "src/scene/ArchievementSence.js",
 
     "src/util/util.js",
     "src/configs/gameconfigs.js"
