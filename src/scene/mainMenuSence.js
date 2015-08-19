@@ -56,6 +56,13 @@ var MainMenuSenceLayer = cc.Layer.extend({
                // cc.audioEngine.playEffect(btnMusic);
                util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(0,200,0) ); 
+
+               // var scene = new CreditsSence();
+               // var layer = new CreditsSenceLayer();
+               // scene.addChild(layer);
+
+               cc.director.runScene(new CreditsSence() );
+               // cc.director.runScene( cc.TransitionPageTurn(1.0, new CreditsSence() ));
            }, this);
        btnCredits.attr({
            x: 240, y: 50, anchorX: 0.5, anchorY: 0.5 });
@@ -69,6 +76,7 @@ var MainMenuSenceLayer = cc.Layer.extend({
                // cc.audioEngine.playEffect(btnMusic);
                util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(0,0, 200) ); 
+
            }, this);
        btnArch.attr({
            x: 375, y: 50, anchorX: 0.5, anchorY: 0.5 });
