@@ -20,6 +20,9 @@
     "src/scene/CreditsSence.js",
     "src/scene/HelpSence.js",
     "src/scene/ArchievementSence.js",
+    "src/scene/SelectSence.js",
+
+    "src/window/baseDialog.js",
 
     "src/util/util.js",
     "src/configs/gameconfigs.js"

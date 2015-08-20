@@ -57,7 +57,10 @@ var MainMenuSenceLayer = cc.Layer.extend({
                cc.log("------btnPlay!");
                // cc.audioEngine.playEffect(btnMusic);
                util.playEffect(MusicSceneType.BUTTON_CLICK);
-               helloLabel.setColor(cc.color(200,0,0) ); 
+               helloLabel.setColor(cc.color(200,0,0) );
+
+               cc.director.runScene(new SelectSence() ); 
+               // cc.director.runScene(new ArchievementSence() );
            }, this);
        btnPlay.attr({
            x: 240, y: 115, anchorX: 0.5, anchorY: 0.5 });
@@ -89,7 +92,13 @@ var MainMenuSenceLayer = cc.Layer.extend({
                util.playEffect(MusicSceneType.BUTTON_CLICK);
                helloLabel.setColor(cc.color(0,0, 200) ); 
 
-               cc.director.runScene(new BaseMenuScene() ); // baseMenuScene, ArchievementSence
+               // cc.director.runScene(new BaseMenuScene() ); // baseMenuScene, ArchievementSence
+               cc.director.runScene(new ArchievementSence() ); // baseMenuScene, ArchievementSence
+               // cc.director.runScene(new cc.TransitionFadeDown(1.0, ArchievementSence) ); // baseMenuScene, ArchievementSence
+               
+               // cc.director.runScene(cc.TransitionFadeDown.create(1.0, ArchievementSence) ); // baseMenuScene, ArchievementSence
+               // new cc.TransitionFadeDown(t, scene)
+
            }, this);
        btnArch.attr({
            x: 375, y: 50, anchorX: 0.5, anchorY: 0.5 });

@@ -128,6 +128,14 @@ var HelloWorldLayer = cc.Layer.extend({
         this.addChild(res3, 2);
     },
     
+    basicControl:function() {
+        //加载介绍
+       var labelExplain = new cc.LabelTTF("Explain", "Arial", 16);
+       labelExplain.enableStroke(ccBLACK, 3);
+       labelExplain.attr({ x: 300, y: 320, anchorX: 0, anchorY: 0 });
+       this.addChild(labelExplain);
+    },
+
     bakeLayer:function() {
         cc.log("bake");
 //      this.bake();

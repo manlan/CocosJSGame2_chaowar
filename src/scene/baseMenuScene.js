@@ -30,6 +30,8 @@ var BaseMenuLayer = cc.Layer.extend({
        btnBack.attr({
            x: 10, y: 10, anchorX: 0, anchorY: 0 });
 
+       v
+
        // 菜单
        this._menu = new cc.Menu(btnBack, null);
        this._menu.attr({
@@ -39,6 +41,7 @@ var BaseMenuLayer = cc.Layer.extend({
 	},
 
 	setBackgroundImg:function(resIMG) {
+		cc.log("------setBackgroundImg");
 		if(this._backgroundImg)
 		{
 			if(resIMG) {
@@ -48,6 +51,7 @@ var BaseMenuLayer = cc.Layer.extend({
 	},
 
 	setMenuPosition:function(ccPoint) {
+		cc.log("------setMenuPosition");
 		if(this._menu)
 		{
 			if(ccPoint) {
