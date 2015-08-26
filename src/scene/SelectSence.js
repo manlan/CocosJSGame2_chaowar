@@ -2,7 +2,7 @@
 
 var SelectSenceLayer = BaseMenuLayer.extend({
 	ctor:function () {
-		this._super();
+        this._super();
 
 		cc.log("---------------SelectSenceLayer-----------");
 
@@ -35,7 +35,40 @@ var SelectSenceLayer = BaseMenuLayer.extend({
            x: -480 + 80, y: 280, anchorX: 0, anchorY: 0 });
        this._menu.addChild(btnReset);
        
-		// this._super.setMenuPosition(cc.p(410, 315) ); 
+       // --- 添加按钮 -- 
+		var bgWave = new cc.Sprite(res.waveStation_png);
+        bgWave.attr({anchorX: 0.5, anchorY: 0.5, x : 100, y : 20 });
+        this.addChild(bgWave);
+
+        // 魔法按钮
+		 //var btnMagic = new ccui.Button(res.waveStation_png, res.waveStationLight_png );
+        // btnMagic.attr({x : 410, y : 60, anchorY:0.5, anchorY: 0.5 });
+        // btnMagic.addTouchEventListener(this.onbtnMagicTouchEvent, this);
+        // this.addChild(btnMagic, 101);
+
+        //var sprMagic =      new cc.Scale9Sprite(res.btnWaveStation_png);
+        //var sprMagicDown = new cc.Scale9Sprite(res.waveStationLight_png);
+        //var strMagic = new cc.LabelTTF("Magic", "Arial", 18);
+        //
+        //var btnMagic = new cc.ControlButton(strMagic, sprMagic);
+        //btnMagic.setBackgroundSpriteForState(sprMagic, sprMagicDown);
+        //btnMagic.attr({x : 410, y : 60, anchorY:0.5, anchorY: 0.5 });
+         //btnMagic.addTouchEventListener(this.onbtnMagicTouchEvent, this);
+
+        //var strMagic = new cc.LabelTTF("Magic", "Arial", 18);
+
+        var btnMagic = new ccui.Button(res.btnWaveStation_png, res.waveStationLight_png );
+        btnMagic.addTouchEventListener(this.onbtnMagicTouchEvent, this);
+        //strMagic.attr({x : 410, y : 60, anchorY:0.5, anchorY: 0.5 });
+        btnMagic.attr({x : 60, y : 90 + 60, anchorY:0.5, anchorY: 0.5 });
+        this.addChild(btnMagic);
+	},
+
+	onbtnMagicTouchEvent:function() {
+		cc.log("----- onbtnMagicTouchEvent");
+
+        var dialog = new BaseDialog();
+        this.addChild(dialog, 100);
 	},
 });
 

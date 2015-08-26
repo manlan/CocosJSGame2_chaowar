@@ -6,6 +6,16 @@ var HelloWorldLayer = cc.Layer.extend({
         // 1. super init first
         this._super();
 
+        var bgImg = new ccui.ImageView(res.mainMenuBg_png);
+        bgImg.attr({anchorX: 0.5, anchorY: 0.5, x : 240, y : cc.director.getWinSize().width/2 });
+        this.addChild(powerPng, 2);
+
+        // this.initMain();
+        
+        // return true;
+    },
+
+    initMain:function() {
         /////////////////////////////
         // 2. add a menu item with "X" image, which is clicked to quit the program
         //    you may modify it.
@@ -66,12 +76,10 @@ var HelloWorldLayer = cc.Layer.extend({
         );
 
         // plist文件
-        cc.spriteFrameCache.addSpriteFrames(res.dpsg_plist, res.dpsg_png);
+        // cc.spriteFrameCache.addSpriteFrames(res.dpsg_plist, res.dpsg_png);
         //  cc.textureCache.addImage(res.dpsg_png);
-        this.initPlist();
+        // this.initPlist();
         // this.bakeLayer();
-        
-        return true;
     },
 
     initPlist:function() {

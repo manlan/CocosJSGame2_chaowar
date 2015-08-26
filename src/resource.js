@@ -21,8 +21,12 @@ var res = {
     fY004_png : "res/UpdataSence/fY004.png",
 
     selectWaveBg_png : "res/SelectSence/selectWaveBg.png",
-    btnUpdate_png : "res/SelectSence/btnUpdate.png",
-    btnUpdateDown_png : "res/SelectSence/btnUpdateDown.png",
+    selectMagicBg_png : "res/SelectSence/selectMagicBg.png",
+    waveStationLight_png : "res/SelectSence/waveStationLight.png",
+
+    btnUpdate_png :     "res/SelectSence/btnUpdate.png",
+    btnUpdateDown_png : "res/UpdataSence/btnUpdateDown.png",
+    
     btnReset_png : "res/SelectSence/btnReset.png",
     btnResetDown_png : "res/SelectSence/btnResetDown.png",
     btnYes_png : "res/SelectSence/btnYes.png",
@@ -40,7 +44,7 @@ var res = {
 
     btnBack_png : "res/SelectSence/btnBack.png",
     btnBackDown_png : "res/SelectSence/btnBackDown.png",
-    
+
     archievementBg_png : "res/ArchievementSence/archievementBg.png",
     archievement01_png : "res/ArchievementSence/archievement01.png",
 

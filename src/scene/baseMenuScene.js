@@ -30,8 +30,6 @@ var BaseMenuLayer = cc.Layer.extend({
        btnBack.attr({
            x: 10, y: 10, anchorX: 0, anchorY: 0 });
 
-       v
-
        // 菜单
        this._menu = new cc.Menu(btnBack, null);
        this._menu.attr({
